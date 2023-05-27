@@ -1,0 +1,164 @@
+$purple: purple;
+$orange: orange;
+$lightOrange: rgba(255, 166, 0, 0.363);
+$lightGray: rgba(205, 202, 202, 0.9);
+$darkGray: rgb(230, 230, 222);
+$darkPurple: rgb(172, 0, 172);
+$lightPurple: rgb(172, 0, 172, 0.7);
+$background-color: rgba(179, 172, 172, 0.7);
+@mixin navbar_li_active {
+  background-color: rgba(202, 189, 189, 0.9);
+  color: #333;
+}
+
+body {
+  background-image: linear-gradient($background-color, $background-color),
+    url("../images/b.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-bottom: 20px;
+}
+
+main {
+  margin-left: 30px;
+  flex: 1 0 auto;
+}
+
+footer {
+  background-color: $orange;
+  flex: 0 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+a {
+  color: $darkPurple;
+  font-family: Georgia, "Times New Roman", Times, cursive;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  box-sizing: border-box;
+  height: 5px;
+  background-color: $orange;
+}
+
+.aligncenter {
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Comic Sans MS", Comic Sans, cursive;
+  font-size: 48px;
+  color: $purple;
+  text-align: center;
+}
+
+h2 {
+  font-family: "New Century Schoolbook", "TeX Gyre Schola", serif;
+  font-size: 38px;
+  color: $purple;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  color: $darkPurple;
+}
+
+ul,
+ol,
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+.up_button {
+  font-size: 20px;
+  position: fixed;
+  top: 470px;
+  left: 5px;
+  border: none;
+  background: $lightOrange;
+  text-align: center;
+  padding: 5px;
+  bottom: 208px;
+  cursor: pointer;
+  color: #333;
+  font-family: verdana;
+  border-radius: 5px;
+}
+
+.a_up {
+  color: $darkGray;
+}
+
+.up_button:hover {
+  background-color: $orange;
+}
+
+.navbar {
+  background-color: $orange;
+}
+
+.navbar li a {
+  color: #333;
+  &:hover {
+    @include navbar_li_active();
+  }
+  &:focus {
+    @include navbar_li_active();
+  }
+}
+
+.row {
+  margin-top: 30px;
+}
+
+.dropdown-menu,
+#btn_down,
+select {
+  background-color: $orange;
+  font-size: 20px;
+  color: black;
+}
+
+.table {
+  width: 30%;
+  font-size: 20px;
+}
+
+.input-group {
+  width: 50%;
+}
+
+.form-control {
+  background-color: $lightGray;
+}
+
+.btn {
+  background-color: $darkPurple;
+  border-color: $darkPurple;
+  border-width: 3px;
+
+  &:hover {
+    border-color: $darkPurple;
+    border-width: 3px;
+  }
+}
+
+.input-group-text {
+  background-color: $lightGray;
+}
+
+.mas_input {
+  width: 50%;
+}
